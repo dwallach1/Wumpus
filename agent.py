@@ -34,7 +34,6 @@ def createBoardWithCellRepresentation():
 
 #kb stands for knowledgebase
 name = updatewumpusNowWithRocks.intialize_world()
-#name = updatewumpusNowWithRocks.intialize_my_world("Cell 44", "Cell 34", ["Cell 14", "Cell 23", "Cell 32"])
 
 bindings = {}
 kb = createBoardWithCellRepresentation()
@@ -48,7 +47,6 @@ moves = ["Cell 11"]
 #update the kb using these perceptions
 def updateKB(perceptions):
     cellName = perceptions[5]
-    #var = kb.get([cellName]["cellInfo"].visited, False)
     kb[cellName]["cellInfo"].numVisited += 1
     if kb[cellName]["cellInfo"].visited == False:
         kb[cellName]["cellInfo"].neighbors = updatewumpusNowWithRocks.look_ahead(name)
